@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp16_pad">16dp</dimen>
+    <dimen name="dp176_nav">176dp</dimen>
+    <dimen name="dp72_icon">72dp</dimen>
+    <dimen name="dp8_pad">8dp</dimen>
+    <dimen name="sp18_text">18sp</dimen>
+    <dimen name="dp4_elevate">4dp</dimen>
+    <dimen name="sp30_text">30sp</dimen>
+</resources>
