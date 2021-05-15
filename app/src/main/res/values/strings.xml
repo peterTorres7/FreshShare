@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">FreshShare</string>
+    <string name="app_name">Fresh Share</string>
+    <string name="sign_in">Sign In</string>
+    <string name="vendors">Vendors</string>
+    <string name="food_descriptions">Food Descriptions</string>
+    <string name="settings">Settings</string>
+    <string name="fresh_share_title">Fresh Share</string>
+    <string name="freshShare_email">freshshare@gmail.org</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="future_vendors">Vendors Page goes here</string>
+    <string name="future_sign_in">Sign In goes Here</string>
+    <string name="future_food_descripts">Food Descriptions go here</string>
+    <string name="future_settings">Settings Go Here</string>
 </resources>

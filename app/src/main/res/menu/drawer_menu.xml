@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_sign_in"
+            android:icon="@drawable/ic_sign_in"
+            android:iconTint="@color/s_text_dark"
+            android:title="@string/sign_in" />
+
+        <item
+            android:id="@+id/nav_vendors"
+            android:icon="@drawable/ic_vendor_page"
+            android:title="@string/vendors" />
+
+        <item
+            android:id="@+id/nav_food_descriptions"
+            android:icon="@drawable/ic_food_id"
+            android:title="@string/food_descriptions" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings" />
+    </group>
+</menu>
