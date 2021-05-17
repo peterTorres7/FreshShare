@@ -7,4 +7,7 @@
     <dimen name="sp18_text">18sp</dimen>
     <dimen name="dp4_elevate">4dp</dimen>
     <dimen name="sp30_text">30sp</dimen>
+    <dimen name="sign_up_margin">40dp</dimen>
+    <dimen name="image_height">236dp</dimen>
+    <dimen name="sign_up_padding">10dp</dimen>
 </resources>

@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FreshShare"
         android:requestLegacyExternalStorage="true">
+        <activity android:name=".SignUpActivity"/>
         <activity android:name=".MainActivity"
             android:label="@string/fresh_share_title"
             android:theme="@style/AppTheme.NoActionBar">
