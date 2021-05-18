@@ -10,4 +10,5 @@
     <dimen name="sign_up_margin">40dp</dimen>
     <dimen name="image_height">236dp</dimen>
     <dimen name="sign_up_padding">10dp</dimen>
+    <dimen name="dp20_plate_image">20dp</dimen>
 </resources>
