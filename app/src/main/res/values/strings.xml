@@ -21,4 +21,8 @@
     <string name="steak_fajita_plate">Steak Fajita Plate</string>
     <string name="lorem_ipsum">Nulla odio orci, finibus eget tincidunt ac, suscipit vel leo. Nulla ipsum lectus, auctor eget pellentesque consectetur, vulputate id felis. Suspendisse ac neque nec nisi imperdiet sagittis iaculis in enim. Aliquam eu sodales ante. Nulla lacinia scelerisque imperdiet. Suspendisse efficitur consectetur mattis. Suspendisse ultricies risus eget turpis feugiat malesuada.</string>
     <string name="vendor_info">Vendor Info</string>
+    <string name="vendor_email">Vendor Email</string>
+    <string name="vendor_address">Vendor Address</string>
+    <string name="vendor_food_type">Vendor Food Type</string>
+    <string name="vendor_profile_pic">Vendor Profile Pic</string>
 </resources>
