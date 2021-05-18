@@ -22,10 +22,20 @@
         android:layout_centerInParent="true" />
 
     <TextView
+        android:id="@+id/plateDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/dp20_plate_image"
         android:layout_below="@+id/plateName"
         android:text="@string/lorem_ipsum" />
+
+    <TextView
+        android:id="@+id/plateProvider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp20_plate_image"
+        android:layout_below="@+id/plateDescription"
+        android:text="@string/vendor_info"
+        android:textSize="@dimen/sp18_text" />
 
 </RelativeLayout>
