@@ -18,4 +18,8 @@
     <string name="password">Password</string>
     <string name="sign_up">Sign Up</string>
     <string name="fresh_share">Fresh Share</string>
+    <string name="vendor_email">Vendor Email</string>
+    <string name="vendor_address">Vendor Address</string>
+    <string name="vendor_food_type">Vendor Food Type</string>
+    <string name="vendor_profile_pic">Vendor Profile Pic</string>
 </resources>
