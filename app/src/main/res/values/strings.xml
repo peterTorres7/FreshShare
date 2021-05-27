@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Fresh Share</string>
-    <string name="sign_in">Sign In</string>
+    <string name="sign_in">Sign Up</string>
     <string name="vendors">Vendors</string>
     <string name="food_descriptions">Food Descriptions</string>
     <string name="settings">Settings</string>
@@ -25,4 +25,5 @@
     <string name="vendor_address">Vendor Address</string>
     <string name="vendor_food_type">Vendor Food Type</string>
     <string name="vendor_profile_pic">Vendor Profile Pic</string>
+    <string name="home">Home</string>
 </resources>

@@ -7,6 +7,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -42,19 +44,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.nav_sign_in:
-                getSupportFragmentManager().beginTransaction().replace(R.id.frag_container,
-                        new SignUpFragment()).commit();
+            case R.id.nav_home:
+                Intent intent_home = new Intent(this, MainActivity.class);
+                startActivity(intent_home);
+                break;
+
+            case R.id.nav_sign_up:
+                Intent intent_sign_up = new Intent(this, SignUpActivity.class);
+                startActivity(intent_sign_up);
                 break;
 
             case R.id.nav_vendors:
                 getSupportFragmentManager().beginTransaction().replace(R.id.frag_container,
                         new VendorsFragment()).commit();
-                break;
-
-            case R.id.nav_food_descriptions:
-                getSupportFragmentManager().beginTransaction().replace(R.id.frag_container,
-                        new FoodDescriptionFragment()).commit();
                 break;
 
             case R.id.nav_settings:
@@ -64,5 +66,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    @Override
+    public void onRestart() {
+        super.onRestart();
+        finish();
+        startActivity(getIntent());
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 }

@@ -40,4 +40,5 @@
         app:itemTextColor="@color/s_text"
         app:menu="@menu/drawer_menu" />
 
+
 </androidx.drawerlayout.widget.DrawerLayout>

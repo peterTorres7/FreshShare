@@ -5,7 +5,12 @@
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_sign_in"
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home"/>
+
+        <item
+            android:id="@+id/nav_sign_up"
             android:icon="@drawable/ic_sign_in"
             android:iconTint="@color/s_text_dark"
             android:title="@string/sign_in" />
@@ -14,11 +19,6 @@
             android:id="@+id/nav_vendors"
             android:icon="@drawable/ic_vendor_page"
             android:title="@string/vendors" />
-
-        <item
-            android:id="@+id/nav_food_descriptions"
-            android:icon="@drawable/ic_food_id"
-            android:title="@string/food_descriptions" />
 
         <item
             android:id="@+id/nav_settings"
