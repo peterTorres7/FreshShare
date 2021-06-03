@@ -26,4 +26,6 @@
     <string name="vendor_food_type">Vendor Food Type</string>
     <string name="vendor_profile_pic">Vendor Profile Pic</string>
     <string name="home">Home</string>
+    <string name="product_title">Food Item</string>
+    <string name="about">about</string>
 </resources>
