@@ -74,6 +74,7 @@
             android:padding="@dimen/sign_up_padding"
             android:layout_gravity="center"
             android:onClick="SignUp"
+            android:backgroundTint="@color/p_light"
             android:text="@string/sign_up" />
 
 
