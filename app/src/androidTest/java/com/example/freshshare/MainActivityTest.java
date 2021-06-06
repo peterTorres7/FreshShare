@@ -32,6 +32,7 @@ public class MainActivityTest {
 
         onView(withId(R.id.welcome)).check((matches(withText("Welcome to Fresh Share!"))));
         onView(withId(R.id.fresh_foods)).check((matches(withText("Recently Added Foods Available"))));
+
     }
 
     @Test
