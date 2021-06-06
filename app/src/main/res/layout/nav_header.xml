@@ -11,7 +11,8 @@
     <ImageView
         android:layout_width="@dimen/dp72_icon"
         android:layout_height="@dimen/dp72_icon"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="@dimen/dp10_dimen"
+        android:paddingTop="@dimen/dp16_pad"
         android:src="@drawable/ic_freshshare" />
 
     <TextView
@@ -20,7 +21,7 @@
         android:fontFamily="@font/simonetta"
         android:paddingTop="@dimen/dp8_pad"
         android:text="@string/fresh_share_title"
-        android:textSize="@dimen/sp18_text"
+        android:textSize="@dimen/sp28_text"
         android:textStyle="bold" />
 
     <TextView
