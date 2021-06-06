@@ -36,7 +36,9 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodCardViewHo
         if (foodList != null) {
             FoodItem m = this.foodList.get(position);
             holder.name.setText(m.name);
-            holder.about.setText(m.about);
+            holder.aboutFull = m.about;
+            String aboutBrief = m.about.substring(0,100);
+            holder.about.setText(aboutBrief);
             holder.imageUrl = m.imageUrl;
             Picasso.get().load(m.getImageUrl()).into(holder.matchImage);
         }

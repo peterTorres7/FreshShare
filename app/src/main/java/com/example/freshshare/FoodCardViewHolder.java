@@ -20,6 +20,7 @@ public class FoodCardViewHolder extends RecyclerView.ViewHolder {
     public TextView name;
     public TextView about;
     public String imageUrl;
+    public String aboutFull;
 
     public FoodCardViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -32,7 +33,7 @@ public class FoodCardViewHolder extends RecyclerView.ViewHolder {
             public void onClick(View v) {
                 Bundle b = new Bundle();
                 b.putString(Constants.KEY_NAME, name.getText().toString());
-                b.putString(Constants.KEY_ABOUT, about.getText().toString());
+                b.putString(Constants.KEY_ABOUT, aboutFull);
                 b.putString(Constants.KEY_URL, imageUrl);
 
                 Intent intent = new Intent(matchImage.getContext(),FoodDescriptionActivity.class);
