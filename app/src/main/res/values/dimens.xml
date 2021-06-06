@@ -16,4 +16,6 @@
     <dimen name="matches_grid_spacing_small">4dp</dimen>
     <dimen name="desc_card_image_height">300dp</dimen>
     <dimen name="padding_desc_food">20dp</dimen>
+    <dimen name="sp28_text">28sp</dimen>
+    <dimen name="dp10_dimen">10dp</dimen>
 </resources>
