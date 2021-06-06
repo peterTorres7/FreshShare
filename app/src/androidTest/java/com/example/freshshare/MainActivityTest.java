@@ -13,6 +13,7 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.contrib.DrawerMatchers.isClosed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
@@ -28,6 +29,9 @@ public class MainActivityTest {
 
         onView(withId(R.id.nav_view))
                 .perform(NavigationViewActions.navigateTo(R.id.nav_home));
+
+        onView(withId(R.id.welcome)).check((matches(withText("Welcome to Fresh Share!"))));
+        onView(withId(R.id.fresh_foods)).check((matches(withText("Recently Added Foods Available"))));
     }
 
     @Test
@@ -38,6 +42,8 @@ public class MainActivityTest {
 
         onView(withId(R.id.nav_view))
                 .perform(NavigationViewActions.navigateTo(R.id.nav_vendors));
+
+        onView(withId(R.id.participating_vendors)).check((matches(withText("Participating Vendors"))));
     }
 
     @Test
@@ -48,6 +54,8 @@ public class MainActivityTest {
 
         onView(withId(R.id.nav_view))
                 .perform(NavigationViewActions.navigateTo(R.id.nav_settings));
+
+        onView(withId(R.id.vendor_info)).check((matches(withText("Update Your Information"))));
     }
 
     @Test
@@ -58,5 +66,7 @@ public class MainActivityTest {
 
         onView(withId(R.id.nav_view))
                 .perform(NavigationViewActions.navigateTo(R.id.nav_sign_up));
+
+        onView(withId(R.id.new_vendor)).check((matches(withText("New Vendor? Sign Up Below!"))));
     }
 }
