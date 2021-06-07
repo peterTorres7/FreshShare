@@ -28,4 +28,9 @@
     <string name="home">Home</string>
     <string name="product_title">Food Item</string>
     <string name="about">about</string>
+    <string name="food_frag_title">Recently Added Foods Available</string>
+    <string name="new_vendor_text">New Vendor? Sign Up Below!</string>
+    <string name="existing_vendors_text">Participating Vendors</string>
+    <string name="welcome_text">Welcome to Fresh Share!</string>
+    <string name="update_info_text">Update Your Information</string>
 </resources>
