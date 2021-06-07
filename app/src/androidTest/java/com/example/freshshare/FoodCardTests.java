@@ -58,6 +58,20 @@ public class FoodCardTests {
         onView(withId(R.id.welcome)).check(matches(withText("Welcome to Fresh Share!")));
     }
 
+    @Test
+    public void checkRecyclerViewSignUpDrawer() throws InterruptedException {
+        Thread.sleep(5000);
+        onView(withId(R.id.recycler_view)).perform(RecyclerViewActions.scrollToPosition(1));
+        onView(withId(R.id.recycler_view)).perform(RecyclerViewActions.actionOnItemAtPosition(1, new ClickOnImage()));
+        Thread.sleep(2000);
+        onView(withId(R.id.drawer_layout))
+                .check(matches(isClosed(Gravity.LEFT))) // Left Drawer should be closed.
+                .perform(DrawerActions.open()); // Open Drawer
+
+        onView(withText("Sign Up")).perform(click());
+        onView(withId(R.id.new_vendor)).check(matches(withText("New Vendor? Sign Up Below!")));
+    }
+
     public static class ClickOnImage implements ViewAction {
 
         ViewAction c = click();
