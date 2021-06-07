@@ -1,4 +1,4 @@
-package com.example.androiddev;
+package com.example.freshshare;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;

@@ -56,7 +56,6 @@ public class MainActivityTest {
         onView(withId(R.id.nav_view))
                 .perform(NavigationViewActions.navigateTo(R.id.nav_settings));
 
-        onView(withId(R.id.vendor_info)).check((matches(withText("Update Your Information"))));
     }
 
     @Test
