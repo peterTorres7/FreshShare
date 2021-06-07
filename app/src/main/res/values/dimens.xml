@@ -21,4 +21,6 @@
     <dimen name="dp3_dimen">3dp</dimen>
     <dimen name="dp5_dimen">5dp</dimen>
     <dimen name="sp25_dimen">25sp</dimen>
+    <dimen name="tenDp">10dp</dimen>
+    <dimen name="dp20">20dp</dimen>
 </resources>
