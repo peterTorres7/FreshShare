@@ -82,7 +82,7 @@ public class MainActivityTest {
                 .check(matches(isClosed(Gravity.LEFT))) // Left Drawer should be closed.
                 .perform(DrawerActions.open()); // Open Drawer
 
-        onView(withId(R.id.nav_view))
+        onView(withId(R.id.nav_view_description))
                 .perform(NavigationViewActions.navigateTo(R.id.nav_sign_up));
         onView(withId(R.id.new_vendor)).check(matches(withText("New Vendor? Sign Up Below!")));
     }
