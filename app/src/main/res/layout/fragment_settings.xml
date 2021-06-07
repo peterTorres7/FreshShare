@@ -1,126 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent">
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/pickupTimeReminder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/tenDp"
-        android:textSize="@dimen/sp18_text"
-        android:text="@string/pickup_time_reminder"/>
-
-    <TimePicker
-        android:id="@+id/reminderTimePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/pickupTimeReminder"/>
-
-    <Button
-        android:id="@+id/reminderButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/reminderTimePicker"
-        android:layout_centerHorizontal="true"
-        android:text="@string/set_reminder" />
-
-    <TextView
-        android:id="@+id/yourReminderTimeIs"
+        android:id="@+id/vendor_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/reminderButton"
-        android:padding="@dimen/tenDp"
-        android:text="@string/your_reminder_time_is"
-        android:textStyle="italic" />
-
-    <TextView
-        android:id="@+id/timeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/yourReminderTimeIs"
-        android:gravity="center"
-        android:padding="@dimen/tenDp"
-        android:text="@string/time_selected" />
-
-    <TextView
-        android:id="@+id/maximumDistanceTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/timeTextView"
-        android:padding="@dimen/tenDp"
-        android:text="@string/please_select_distance"
-        android:textSize="@dimen/sp18_text"
-        android:textStyle="italic" />
-
-    <Spinner
-        android:id="@+id/distanceSearchSpinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/maximumDistanceTextView" />
-
-    <TextView
-        android:id="@+id/privacyTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/distanceSearchSpinner"
-        android:text="@string/please_select_privacy"
-        android:textSize="@dimen/sp18_text"
-        android:padding="@dimen/tenDp"
-        android:layout_marginTop="@dimen/dp20"
-        android:textStyle="italic" />
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/genderGroup"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/privacyTextView"
-        android:orientation="vertical" >
-
-        <RadioGroup
-            android:id="@+id/radioPrivacy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <RadioButton
-                android:id="@+id/radioPrivate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/privateSelection"
-                android:checked="true" />
-
-            <RadioButton
-                android:id="@+id/radioPublic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/publicSelection" />
-
-        </RadioGroup>
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/dataPermissionTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/genderGroup"
-        android:padding="@dimen/tenDp"
-        android:text="@string/do_you_allow_sharing_of_data_analytics"
-        android:textSize="@dimen/sp18_text"
-        android:textStyle="italic" />
-
-    <CheckBox
-        android:id="@+id/privacyCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/dataPermissionTextView"
-        android:text="@string/allow_data_analytics" />
-
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/dp3_dimen"
+        android:layout_marginBottom="@dimen/dp5_dimen"
+        android:textColor="@color/p_light"
+        android:text="@string/update_info_text"
+        android:textSize="@dimen/dp20_plate_image"
+        android:textStyle="bold" />
 
 </RelativeLayout>
-    </ScrollView>

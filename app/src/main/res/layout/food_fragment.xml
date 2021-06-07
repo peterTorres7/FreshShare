@@ -4,9 +4,41 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scroll_view">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/dp3_dimen"
+            android:layout_marginBottom="@dimen/dp5_dimen"
+            android:textColor="@color/p_light"
+            android:text="@string/welcome_text"
+            android:textSize="@dimen/sp30_text"
+            android:fontFamily="@font/simonetta"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/fresh_foods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/dp3_dimen"
+            android:layout_marginBottom="@dimen/dp5_dimen"
+            android:textColor="@color/p_light"
+            android:text="@string/food_frag_title"
+            android:textSize="@dimen/dp20_plate_image"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:visibility="visible" />
+    </LinearLayout>
 </ScrollView>

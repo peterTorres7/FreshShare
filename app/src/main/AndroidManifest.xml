@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUpActivity"/>
+        <activity android:name=".FoodDescriptionActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
