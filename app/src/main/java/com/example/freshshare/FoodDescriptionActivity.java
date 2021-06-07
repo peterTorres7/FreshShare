@@ -60,8 +60,6 @@ public class FoodDescriptionActivity extends AppCompatActivity implements Naviga
                 Picasso.get().load(b.getString(Constants.KEY_URL)).into(image);
             }
         }
-
-
     }
 
     @Override
@@ -72,15 +70,9 @@ public class FoodDescriptionActivity extends AppCompatActivity implements Naviga
                 startActivity(intent_home);
                 break;
 
-            case R.id.nav_sign_up:
-                Intent intent_sign_up = new Intent(this, SignUpActivity.class);
-                startActivity(intent_sign_up);
-                break;
-
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
 }
+
