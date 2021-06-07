@@ -23,18 +23,49 @@ public class SignUpTest {
             = new ActivityScenarioRule<>(SignUpActivity.class);
 
     @Test
-    public void profileFieldsRequired() {
+    public void vendorFieldRequired() {
         onView(withId(R.id.vendor)).perform(typeText(""));
+        onView(withId(R.id.email)).perform(typeText("chimichanga@gmail.com"));
+        onView(withId(R.id.address)).perform(typeText("100 Awesome St. Seattle WA 98101"));
+        onView(withId(R.id.password)).perform(typeText("MaxEffort1!"));
+
+        onView(withId(R.id.sign_up_button)).perform(scrollTo(), click());
+        onView(allOf(withId(R.id.vendor), hasErrorText("Please Enter Vendor Name")));
+    }
+
+    @Test
+    public void emailFieldRequired() {
+        onView(withId(R.id.vendor)).perform(typeText("Deadpool's Doughnuts"));
         onView(withId(R.id.email)).perform(typeText(""));
+        onView(withId(R.id.address)).perform(typeText("100 Awesome St. Seattle WA 98101"));
+        onView(withId(R.id.password)).perform(typeText("MaxEffort1!"));
+
+        onView(withId(R.id.sign_up_button)).perform(scrollTo(), click());
+        onView(allOf(withId(R.id.email), hasErrorText("Please Enter Valid Email")));
+    }
+
+    @Test
+    public void addressFieldRequired() {
+        onView(withId(R.id.vendor)).perform(typeText("Deadpool's Doughnuts"));
+        onView(withId(R.id.email)).perform(typeText("chimichanga@gmail.com"));
         onView(withId(R.id.address)).perform(typeText(""));
+        onView(withId(R.id.password)).perform(typeText("MaxEffort1!"));
+
+        onView(withId(R.id.sign_up_button)).perform(scrollTo(), click());
+        onView(allOf(withId(R.id.address), hasErrorText("Please Enter address")));
+    }
+
+    @Test
+    public void passwordFieldRequired() {
+        onView(withId(R.id.vendor)).perform(typeText("Deadpool's Doughnuts"));
+        onView(withId(R.id.email)).perform(typeText("chimichanga@gmail.com"));
+        onView(withId(R.id.address)).perform(typeText("100 Awesome St. Seattle WA 98101"));
         onView(withId(R.id.password)).perform(typeText(""));
 
-        onView(withId(R.id.sign_up_button)).perform(scrollTo(),click());
-
-        onView(allOf(withId(R.id.vendor), hasErrorText("Please Enter Vendor Name")));
-        onView(allOf(withId(R.id.email), hasErrorText("Please Enter Valid Email")));
-        onView(allOf(withId(R.id.address), hasErrorText("Please Enter address")));
+        onView(withId(R.id.sign_up_button)).perform(scrollTo(), click());
         onView(allOf(withId(R.id.password), hasErrorText("Please Set Password")));
     }
 
 }
+
+
