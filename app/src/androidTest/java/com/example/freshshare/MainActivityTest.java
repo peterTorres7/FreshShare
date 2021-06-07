@@ -3,6 +3,8 @@ package com.example.freshshare;
 import androidx.test.espresso.contrib.RecyclerViewActions;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+
+import android.content.Intent;
 import android.view.Gravity;
 
 import androidx.test.espresso.contrib.DrawerActions;
@@ -86,4 +88,5 @@ public class MainActivityTest {
                 .perform(NavigationViewActions.navigateTo(R.id.nav_sign_up));
         onView(withId(R.id.new_vendor)).check(matches(withText("New Vendor? Sign Up Below!")));
     }
+
 }
