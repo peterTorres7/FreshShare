@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/reminderTimePicker"
             android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/p_light"
             android:text="@string/set_reminder" />
 
         <TextView

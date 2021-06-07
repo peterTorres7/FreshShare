@@ -66,6 +66,16 @@ public class SignUpTest {
         onView(allOf(withId(R.id.password), hasErrorText("Please Set Password")));
     }
 
+    @Test
+    public void fillForm() {
+        onView(withId(R.id.vendor)).perform(typeText("Deadpool's Doughnuts"));
+        onView(withId(R.id.email)).perform(typeText("chimichanga@gmail.com"));
+        onView(withId(R.id.address)).perform(typeText("100 Awesome St. Seattle WA 98101"));
+        onView(withId(R.id.password)).perform(typeText("MaxEffort1!"));
+
+        onView(withId(R.id.sign_up_button)).perform(scrollTo(), click());
+    }
+
 }
 
 
