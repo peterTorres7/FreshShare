@@ -2,6 +2,7 @@ package com.example.freshshare;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.SyncStateContract;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
@@ -58,10 +59,8 @@ public class SignUpActivity extends AppCompatActivity {
         }
 
         Intent intent = new Intent(this, MainActivity.class);
-        Bundle bundle = new Bundle();
+        Bundle b = new Bundle();
 
         startActivity(intent);
-
     }
-
 }

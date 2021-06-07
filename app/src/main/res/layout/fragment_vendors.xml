@@ -12,6 +12,18 @@
         android:orientation="vertical"
         tools:context=".VendorFragment">
 
+        <TextView
+            android:id="@+id/participating_vendors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/dp3_dimen"
+            android:layout_marginBottom="@dimen/dp5_dimen"
+            android:textColor="@color/p_light"
+            android:text="@string/existing_vendors_text"
+            android:textSize="@dimen/sp30_text"
+            android:textStyle="bold"/>
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="200dp"

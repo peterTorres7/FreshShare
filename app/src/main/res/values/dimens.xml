@@ -16,4 +16,7 @@
     <dimen name="matches_grid_spacing_small">4dp</dimen>
     <dimen name="sp28_text">28sp</dimen>
     <dimen name="dp10_dimen">10dp</dimen>
+    <dimen name="dp3_dimen">3dp</dimen>
+    <dimen name="dp5_dimen">5dp</dimen>
+    <dimen name="sp25_dimen">25sp</dimen>
 </resources>
