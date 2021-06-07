@@ -59,8 +59,9 @@ public class SignUpActivity extends AppCompatActivity {
         }
 
         Intent intent = new Intent(this, MainActivity.class);
-        Bundle b = new Bundle();
+        Bundle b = intent.getExtras();
 
         startActivity(intent);
+
     }
 }
