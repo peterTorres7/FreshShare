@@ -33,7 +33,7 @@ public class FoodCardTests {
 
     @Test
     public void checkRecyclerView() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(8000);
         onView(withId(R.id.recycler_view)).perform(RecyclerViewActions.scrollToPosition(1));
         onView(withId(R.id.recycler_view)).perform(RecyclerViewActions.actionOnItemAtPosition(1, new ClickOnImage()));
         Thread.sleep(2000);
