@@ -21,7 +21,8 @@ public class VendorViewModel {
     }
 
     public void getVendors(Consumer<ArrayList<Vendor>> responseCallback) {
-        vendorModel.getItems(
+
+        vendorModel.getVendors(
                 (QuerySnapshot querySnapshot) -> {
                     if (querySnapshot != null) {
                         ArrayList<Vendor> vendors = new ArrayList<>();
@@ -32,6 +33,7 @@ public class VendorViewModel {
                             vendors.add(m);
                         }
                         responseCallback.accept(vendors);
+
                     }
                 },
                 (databaseError -> System.out.println("Error reading Todo Items: " + databaseError))

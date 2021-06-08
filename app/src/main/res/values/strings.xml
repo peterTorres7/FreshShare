@@ -12,7 +12,6 @@
     <string name="future_sign_in">Sign In goes Here</string>
     <string name="future_food_descripts">Food Descriptions go here</string>
     <string name="future_settings">Settings Go Here</string>
-    <string name="vendor_name">Vendor Name</string>
     <string name="email_address">Email address</string>
     <string name="address">Address</string>
     <string name="password">Enter an Image URL!</string>
@@ -43,6 +42,12 @@
     <string name="publicSelection">Public</string>
     <string name="do_you_allow_sharing_of_data_analytics">Do you allow sharing of data analytics?</string>
     <string name="allow_data_analytics">Allow data analytics.</string>
+    <string name="vendor_name">Vendor Name</string>
+    <string name="email">email</string>
+    <string name="edariuspauli_padili_com">edariuspauli@padili.com</string>
+    <string name="_9252_santa_clara_ave_ogden_ut_84404">9252 Santa Clara Ave. Ogden, UT 84404</string>
+    <string name="food_type">Food Type</string>
+    <string name="japanese">Japanese</string>
     <string name="name_of_food">Name of Food</string>
     <string name="food_description">Food Description</string>
     <string name="add_food_item">Add Food Item</string>
