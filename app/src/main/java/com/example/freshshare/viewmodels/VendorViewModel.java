@@ -1,6 +1,5 @@
 package com.example.freshshare.viewmodels;
 
-
 import com.example.freshshare.datamodels.DataModel;
 import com.example.freshshare.models.Vendor;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -22,6 +21,7 @@ public class VendorViewModel {
     }
 
     public void getVendors(Consumer<ArrayList<Vendor>> responseCallback) {
+
         vendorModel.getVendors(
                 (QuerySnapshot querySnapshot) -> {
                     if (querySnapshot != null) {

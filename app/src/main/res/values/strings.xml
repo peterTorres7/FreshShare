@@ -48,6 +48,10 @@
     <string name="_9252_santa_clara_ave_ogden_ut_84404">9252 Santa Clara Ave. Ogden, UT 84404</string>
     <string name="food_type">Food Type</string>
     <string name="japanese">Japanese</string>
+    <string name="name_of_food">Name of Food</string>
+    <string name="food_description">Food Description</string>
+    <string name="add_food_item">Add Food Item</string>
+    <string name="add_food">Add Food</string>
     <string-array name="distance_array">
         <item>5 Miles</item>
         <item>10 Miles</item>
