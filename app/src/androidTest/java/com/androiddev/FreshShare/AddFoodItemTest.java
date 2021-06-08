@@ -52,6 +52,7 @@ public class AddFoodItemTest {
     public void addressFieldRequired() {
         onView(withId(R.id.foodName)).perform(typeText("Deadpool's Doughnuts"));
         onView(withId(R.id.foodDescription)).perform(typeText("chimichanga@gmail.com"));
+        onView(withId(R.id.imageURL)).perform(scrollTo());
         onView(withId(R.id.imageURL)).perform(typeText(""));
         Espresso.closeSoftKeyboard();
         onView(withId(R.id.sign_up_button)).perform(scrollTo(), click());

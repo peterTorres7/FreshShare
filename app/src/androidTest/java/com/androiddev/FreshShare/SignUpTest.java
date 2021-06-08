@@ -26,8 +26,8 @@ public class SignUpTest {
     @Test
     public void vendorFieldRequired() {
         onView(withId(R.id.vendor)).perform(typeText(""));
-        onView(withId(R.id.email)).perform(typeText("chimichanga@gmail.com"));
-        onView(withId(R.id.address)).perform(typeText("100 Awesome St. Seattle WA 98101"));
+        onView(withId(R.id.email)).perform(scrollTo(),typeText("chimichanga@gmail.com"));
+        onView(withId(R.id.address)).perform(scrollTo(),typeText("100 Awesome St. Seattle WA 98101"));
         onView(withId(R.id.imageURL)).perform(scrollTo());
         onView(withId(R.id.imageURL)).perform(typeText("https://i.imgur.com/M8rkMOM.jpeg"));
         Espresso.closeSoftKeyboard();
@@ -38,10 +38,9 @@ public class SignUpTest {
     @Test
     public void emailFieldRequired() {
         onView(withId(R.id.vendor)).perform(typeText("Deadpool's Doughnuts"));
-        onView(withId(R.id.email)).perform(typeText(""));
-        onView(withId(R.id.address)).perform(typeText("100 Awesome St. Seattle WA 98101"));
-        onView(withId(R.id.imageURL)).perform(scrollTo());
-        onView(withId(R.id.imageURL)).perform(typeText("https://i.imgur.com/M8rkMOM.jpeg"));
+        onView(withId(R.id.email)).perform(scrollTo(),typeText(""));
+        onView(withId(R.id.address)).perform(scrollTo(),typeText("100 Awesome St. Seattle WA 98101"));
+        onView(withId(R.id.imageURL)).perform(scrollTo(),typeText("https://i.imgur.com/M8rkMOM.jpeg"));
         Espresso.closeSoftKeyboard();
         onView(withId(R.id.sign_up_button)).perform(scrollTo(), click());
         onView(allOf(withId(R.id.email), hasErrorText("Please Enter Valid Email")));
@@ -50,8 +49,8 @@ public class SignUpTest {
     @Test
     public void addressFieldRequired() {
         onView(withId(R.id.vendor)).perform(typeText("Deadpool's Doughnuts"));
-        onView(withId(R.id.email)).perform(typeText("chimichanga@gmail.com"));
-        onView(withId(R.id.address)).perform(typeText(""));
+        onView(withId(R.id.email)).perform(scrollTo(),typeText("chimichanga@gmail.com"));
+        onView(withId(R.id.address)).perform(scrollTo(),typeText(""));
         onView(withId(R.id.imageURL)).perform(scrollTo());
         onView(withId(R.id.imageURL)).perform(typeText("https://i.imgur.com/M8rkMOM.jpeg"));
         Espresso.closeSoftKeyboard();
@@ -62,8 +61,8 @@ public class SignUpTest {
     @Test
     public void passwordFieldRequired() {
         onView(withId(R.id.vendor)).perform(typeText("Deadpool's Doughnuts"));
-        onView(withId(R.id.email)).perform(typeText("chimichanga@gmail.com"));
-        onView(withId(R.id.address)).perform(typeText("100 Awesome St. Seattle WA 98101"));
+        onView(withId(R.id.email)).perform(scrollTo(),typeText("chimichanga@gmail.com"));
+        onView(withId(R.id.address)).perform(scrollTo(),typeText("100 Awesome St. Seattle WA 98101"));
         onView(withId(R.id.imageURL)).perform(scrollTo());
         onView(withId(R.id.imageURL)).perform(typeText("https://i.imgur.com/M8rkMOM.jpeg"));
         Espresso.closeSoftKeyboard();
@@ -74,8 +73,8 @@ public class SignUpTest {
     @Test
     public void fillForm() {
         onView(withId(R.id.vendor)).perform(typeText("Deadpool's Doughnuts"));
-        onView(withId(R.id.email)).perform(typeText("chimichanga@gmail.com"));
-        onView(withId(R.id.address)).perform(typeText("100 Awesome St. Seattle WA 98101"));
+        onView(withId(R.id.email)).perform(scrollTo(),typeText("chimichanga@gmail.com"));
+        onView(withId(R.id.address)).perform(scrollTo(),typeText("100 Awesome St. Seattle WA 98101"));
         onView(withId(R.id.imageURL)).perform(scrollTo());
         onView(withId(R.id.imageURL)).perform(typeText("https://i.imgur.com/M8rkMOM.jpeg"));
         Espresso.closeSoftKeyboard();
