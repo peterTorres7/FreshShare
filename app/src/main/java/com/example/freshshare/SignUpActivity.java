@@ -35,6 +35,7 @@ public class SignUpActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         address = findViewById(R.id.address);
         imageURL = findViewById(R.id.imageURL);
+
     }
 
     public static boolean IsEmailValid(CharSequence c){
