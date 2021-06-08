@@ -37,7 +37,7 @@ public class AddFoodItemActivity extends AppCompatActivity {
             return;
         }
         if(imageURL.getText().toString().isEmpty()){
-            imageURL.setError("Please Enter Image URl");
+            imageURL.setError("Please Enter Image URL");
             return;
         }
 
