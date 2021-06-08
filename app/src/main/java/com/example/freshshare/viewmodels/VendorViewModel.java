@@ -1,7 +1,8 @@
 package com.example.freshshare.viewmodels;
 
-import com.example.freshshare.datamodels.VendorDataModel;
-import com.example.freshshare.models.VendorItem;
+
+import com.example.freshshare.datamodels.DataModel;
+import com.example.freshshare.models.Vendor;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
@@ -10,37 +11,35 @@ import java.util.function.Consumer;
 
 public class VendorViewModel {
 
-    private VendorDataModel vendorModel;
+    private DataModel vendorModel;
 
     public VendorViewModel() {
-        vendorModel = new VendorDataModel();
+        vendorModel = new DataModel();
     }
 
-    public void addItems(VendorItem f) {
-        vendorModel.addItem(f);
+    public void addVendor(Vendor v) {
+        vendorModel.addVendor(v);
     }
 
-    public void getItems(Consumer<ArrayList<VendorItem>> responseCallback) {
-        vendorModel.getItems(
+    public void getVendors(Consumer<ArrayList<Vendor>> responseCallback) {
+        vendorModel.getVendors(
                 (QuerySnapshot querySnapshot) -> {
                     if (querySnapshot != null) {
-                        ArrayList<VendorItem> items = new ArrayList<>();
+                        ArrayList<Vendor> vendors = new ArrayList<>();
                         for (DocumentSnapshot itemSnap : querySnapshot.getDocuments()) {
-                            VendorItem m = itemSnap.toObject(VendorItem.class);
+                            Vendor m = itemSnap.toObject(Vendor.class);
                             assert m != null;
                             m.uid = itemSnap.getId();
-                            items.add(m);
+                            vendors.add(m);
                         }
-                        responseCallback.accept(items);
+                        responseCallback.accept(vendors);
+
                     }
                 },
                 (databaseError -> System.out.println("Error reading Todo Items: " + databaseError))
         );
     }
 
-    public void updateItems(VendorItem f) {
-        vendorModel.updateItemById(f);
-    }
 
     public void clear() {
         vendorModel.clear();

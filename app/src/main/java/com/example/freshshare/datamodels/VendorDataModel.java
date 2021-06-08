@@ -1,6 +1,6 @@
 package com.example.freshshare.datamodels;
 
-import com.example.freshshare.models.VendorItem;
+import com.example.freshshare.models.Vendor;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -23,7 +23,7 @@ public class VendorDataModel {
         listeners = new ArrayList<>();
     }
 
-    public void addItem(VendorItem f) {
+    public void addItem(Vendor f) {
         CollectionReference todoItemsRef = db.collection("Vendor_Items");
         todoItemsRef.add(f);
     }
@@ -40,10 +40,10 @@ public class VendorDataModel {
         listeners.add(listener);
     }
 
-    public void updateItemById(VendorItem f) {
+    public void updateItemById(Vendor f) {
         DocumentReference todoItemRef = db.collection("Vendor_Items").document(f.uid);
         Map<String, Object> data = new HashMap<>();
-        data.put("vendorName", f.vendorName);
+        data.put("vendorName", f.name);
         data.put("address", f.address);
         data.put("email", f.email);
         data.put("imageUrl", f.imageUrl);

@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.freshshare.models.VendorItem;
+import com.example.freshshare.models.Vendor;
 import com.example.freshshare.viewmodels.VendorViewModel;
 
 import java.util.ArrayList;
@@ -39,16 +39,16 @@ public class VendorsFragment extends Fragment {
         adapter = new VendorRecyclerViewAdapter(vendorList);
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(new VendorGridDecoration(largePadding, smallPadding));
-        getItems();
+        getVendors();
 
 
         return view;
     }
 
-    public void getItems(){
-        viewModel.getItems(
-                (ArrayList<VendorItem> vendorItems) -> {
-                    adapter.setItemsList(vendorItems);
+    public void getVendors(){
+        viewModel.getVendors(
+                (ArrayList<Vendor> vendor) -> {
+                    adapter.setVendorList(vendor);
                     adapter.notifyDataSetChanged();
                 });
     }

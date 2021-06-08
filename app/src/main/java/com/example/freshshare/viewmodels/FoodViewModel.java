@@ -1,6 +1,6 @@
 package com.example.freshshare.viewmodels;
 
-import com.example.freshshare.datamodels.FoodDataModel;
+import com.example.freshshare.datamodels.DataModel;
 import com.example.freshshare.models.FoodItem;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -10,10 +10,10 @@ import java.util.function.Consumer;
 
 public class FoodViewModel {
 
-    private FoodDataModel foodModel;
+    private DataModel foodModel;
 
     public FoodViewModel() {
-        foodModel = new FoodDataModel();
+        foodModel = new DataModel();
     }
 
     public void addItems(FoodItem f) {

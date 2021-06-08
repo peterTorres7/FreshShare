@@ -14,21 +14,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.freshshare.models.Vendor;
+import com.example.freshshare.viewmodels.VendorViewModel;
 import com.google.android.material.navigation.NavigationView;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private Button button;
+    private VendorViewModel vendorModel;
     private EditText vendor;
     private EditText email;
     private EditText address;
-    private EditText password;
+    private EditText imageURL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
+        vendorModel = new VendorViewModel();
+        vendor = findViewById(R.id.vendor);
+        email = findViewById(R.id.email);
+        address = findViewById(R.id.address);
+        imageURL = findViewById(R.id.imageURl);
     }
 
     public static boolean IsEmailValid(CharSequence c){
@@ -36,10 +42,6 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public void SignUp(View view){
-        vendor = findViewById(R.id.vendor);
-        email = findViewById(R.id.email);
-        address = findViewById(R.id.address);
-        password = findViewById(R.id.password);
 
         if(vendor.getText().toString().isEmpty()){
             vendor.setError("Please Enter Vendor Name");
@@ -53,13 +55,16 @@ public class SignUpActivity extends AppCompatActivity {
             address.setError("Please Enter address");
             return;
         }
-        if(password.getText().toString().isEmpty()){
-            password.setError("Please Set Password");
+        if(imageURL.getText().toString().isEmpty()){
+            imageURL.setError("Please Set ImageURL");
             return;
         }
 
+        Vendor v = new Vendor(vendor.getText().toString(),address.getText().toString(),
+                imageURL.getText().toString(),email.getText().toString());
+        vendorModel.addVendor(v);
+
         Intent intent = new Intent(this, MainActivity.class);
-        Bundle b = intent.getExtras();
 
         startActivity(intent);
 

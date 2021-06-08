@@ -7,16 +7,16 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.freshshare.models.VendorItem;
+import com.example.freshshare.models.Vendor;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class VendorRecyclerViewAdapter extends RecyclerView.Adapter<VendorCardViewHolder> {
 
-    private List<VendorItem> vendorList;
+    private List<Vendor> vendorList;
 
-    VendorRecyclerViewAdapter(List<VendorItem> vendorList) {
+    VendorRecyclerViewAdapter(List<Vendor> vendorList) {
         this.vendorList = vendorList;
     }
 
@@ -30,8 +30,8 @@ public class VendorRecyclerViewAdapter extends RecyclerView.Adapter<VendorCardVi
     @Override
     public void onBindViewHolder(@NonNull VendorCardViewHolder holder, int position) {
         if (vendorList != null) {
-            VendorItem m = this.vendorList.get(position);
-            holder.vendorName.setText(m.vendorName);
+            Vendor m = this.vendorList.get(position);
+            holder.vendorName.setText(m.name);
             holder.address.setText(m.address);
             holder.email.setText(m.email);
             holder.imageUrl = m.imageUrl;
@@ -44,7 +44,7 @@ public class VendorRecyclerViewAdapter extends RecyclerView.Adapter<VendorCardVi
         return vendorList.size();
     }
 
-    public void setItemsList(List<VendorItem> m) {
+    public void setVendorList(List<Vendor> m) {
         this.vendorList = m;
     }
 }
