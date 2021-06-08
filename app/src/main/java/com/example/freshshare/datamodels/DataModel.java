@@ -1,6 +1,7 @@
 package com.example.freshshare.datamodels;
 
 import com.example.freshshare.models.FoodItem;
+import com.example.freshshare.models.Vendor;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -14,23 +15,40 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
-public class FoodDataModel {
+public class DataModel {
 
     private FirebaseFirestore db;
     private List<ListenerRegistration> listeners;
 
-    public FoodDataModel() {
+    public DataModel() {
         db = FirebaseFirestore.getInstance();
         listeners = new ArrayList<>();
     }
 
     public void addItem(FoodItem f) {
-        CollectionReference todoItemsRef = db.collection("Food_Items");
-        todoItemsRef.add(f);
+        CollectionReference foodItemRef = db.collection("Food_Items");
+        foodItemRef.add(f);
+    }
+
+    public void addVendor(Vendor v) {
+        CollectionReference vendorRef = db.collection("Vendor_Items");
+        vendorRef.add(v);
     }
 
     public void getItems(Consumer<QuerySnapshot> dataChangedCallback, Consumer<FirebaseFirestoreException> dataErrorCallback) {
         ListenerRegistration listener = db.collection("Food_Items")
+                .addSnapshotListener((queryDocumentSnapshots, e) -> {
+                    if (e != null) {
+                        dataErrorCallback.accept(e);
+                    }
+
+                    dataChangedCallback.accept(queryDocumentSnapshots);
+                });
+        listeners.add(listener);
+    }
+
+    public void getVendors(Consumer<QuerySnapshot> dataChangedCallback, Consumer<FirebaseFirestoreException> dataErrorCallback) {
+        ListenerRegistration listener = db.collection("Vendor_Items")
                 .addSnapshotListener((queryDocumentSnapshots, e) -> {
                     if (e != null) {
                         dataErrorCallback.accept(e);
