@@ -1,48 +1,45 @@
 package com.example.freshshare.viewmodels;
 
 import com.example.freshshare.datamodels.DataModel;
-import com.example.freshshare.models.FoodItem;
+import com.example.freshshare.models.Vendor;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;
 
-public class FoodViewModel {
+public class VendorViewModel {
 
-    private DataModel foodModel;
+    private DataModel vendorModel;
 
-    public FoodViewModel() {
-        foodModel = new DataModel();
+    public VendorViewModel() {
+        vendorModel = new DataModel();
     }
 
-    public void addItems(FoodItem f) {
-        foodModel.addItem(f);
+    public void addVendor(Vendor v) {
+        vendorModel.addVendor(v);
     }
 
-    public void getItems(Consumer<ArrayList<FoodItem>> responseCallback) {
-        foodModel.getItems(
+    public void getVendors(Consumer<ArrayList<Vendor>> responseCallback) {
+        vendorModel.getItems(
                 (QuerySnapshot querySnapshot) -> {
                     if (querySnapshot != null) {
-                        ArrayList<FoodItem> items = new ArrayList<>();
+                        ArrayList<Vendor> vendors = new ArrayList<>();
                         for (DocumentSnapshot itemSnap : querySnapshot.getDocuments()) {
-                            FoodItem m = itemSnap.toObject(FoodItem.class);
+                            Vendor m = itemSnap.toObject(Vendor.class);
                             assert m != null;
                             m.uid = itemSnap.getId();
-                            items.add(m);
+                            vendors.add(m);
                         }
-                        responseCallback.accept(items);
+                        responseCallback.accept(vendors);
                     }
                 },
                 (databaseError -> System.out.println("Error reading Todo Items: " + databaseError))
         );
     }
 
-    public void updateItems(FoodItem f) {
-        foodModel.updateItemById(f);
-    }
 
     public void clear() {
-        foodModel.clear();
+        vendorModel.clear();
     }
 }
