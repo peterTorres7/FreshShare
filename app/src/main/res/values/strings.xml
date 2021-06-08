@@ -15,7 +15,7 @@
     <string name="vendor_name">Vendor Name</string>
     <string name="email_address">Email address</string>
     <string name="address">Address</string>
-    <string name="password">Password</string>
+    <string name="password">Enter an Image URL!</string>
     <string name="sign_up">Sign Up</string>
     <string name="fresh_share">Fresh Share</string>
     <string name="steak_fajita_plate">Steak Fajita Plate</string>
