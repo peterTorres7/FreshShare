@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents"
         android:requestLegacyExternalStorage="true">
-        <activity android:name="MainActivity"
+        <activity android:name=".MainActivity"
             android:label="@string/fresh_share_title"
             android:theme="@style/Theme.MaterialComponents.NoActionBar">
             <intent-filter>
