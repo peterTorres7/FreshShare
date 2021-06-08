@@ -16,7 +16,7 @@ public class VendorViewModel {
         vendorModel = new DataModel();
     }
 
-    public void addItems(Vendor v) {
+    public void addVendor(Vendor v) {
         vendorModel.addVendor(v);
     }
 
