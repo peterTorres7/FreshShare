@@ -43,6 +43,10 @@
     <string name="publicSelection">Public</string>
     <string name="do_you_allow_sharing_of_data_analytics">Do you allow sharing of data analytics?</string>
     <string name="allow_data_analytics">Allow data analytics.</string>
+    <string name="name_of_food">Name of Food</string>
+    <string name="food_description">Food Description</string>
+    <string name="add_food_item">Add Food Item</string>
+    <string name="add_food">Add Food</string>
     <string-array name="distance_array">
         <item>5 Miles</item>
         <item>10 Miles</item>

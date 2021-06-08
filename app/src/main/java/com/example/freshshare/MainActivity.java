@@ -1,5 +1,9 @@
 package com.example.freshshare;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,10 +14,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -69,6 +69,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_vendors:
                 getSupportFragmentManager().beginTransaction().replace(R.id.frag_container,
                         new VendorsFragment()).commit();
+                break;
+
+            case R.id.nav_add_food:
+                Intent intent_add_food = new Intent(this, AddFoodItemActivity.class);
+                startActivity(intent_add_food);
                 break;
 
             case R.id.nav_settings:

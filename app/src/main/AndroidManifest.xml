@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUpActivity"/>
+        <activity android:name=".AddFoodItemActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar"/>
         <activity android:name=".FoodDescriptionActivity"
             android:theme="@style/Theme.MaterialComponents.NoActionBar"/>
         <meta-data
