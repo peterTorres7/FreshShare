@@ -66,14 +66,15 @@
             android:autofillHints="@string/address" />
 
         <EditText
-            android:id="@+id/password"
+
+            android:id="@+id/imageURL"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/sign_up_padding"
             android:layout_gravity="center"
             android:ems="10"
             android:hint="@string/password"
-            android:inputType="textPassword"
+            android:inputType="textUri"
             android:autofillHints="@string/password" />
 
 

@@ -1,7 +1,10 @@
 package com.example.freshshare;
 
+import androidx.test.espresso.contrib.RecyclerViewActions;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+
+import android.content.Intent;
 import android.view.Gravity;
 
 import androidx.test.espresso.contrib.DrawerActions;
@@ -10,6 +13,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.contrib.DrawerMatchers.isClosed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
@@ -56,7 +60,6 @@ public class MainActivityTest {
         onView(withId(R.id.nav_view))
                 .perform(NavigationViewActions.navigateTo(R.id.nav_settings));
 
-        onView(withId(R.id.vendor_info)).check((matches(withText("Update Your Information"))));
     }
 
     @Test

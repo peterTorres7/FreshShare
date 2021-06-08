@@ -15,7 +15,7 @@
     <string name="vendor_name">Vendor Name</string>
     <string name="email_address">Email address</string>
     <string name="address">Address</string>
-    <string name="password">Password</string>
+    <string name="password">Enter an Image URL!</string>
     <string name="sign_up">Sign Up</string>
     <string name="fresh_share">Fresh Share</string>
     <string name="steak_fajita_plate">Steak Fajita Plate</string>
@@ -33,4 +33,21 @@
     <string name="existing_vendors_text">Participating Vendors</string>
     <string name="welcome_text">Welcome to Fresh Share!</string>
     <string name="update_info_text">Update Your Information</string>
+    <string name="pickup_time_reminder">Please select a pickup time reminder:</string>
+    <string name="set_reminder">Set Reminder!</string>
+    <string name="your_reminder_time_is">"Your reminder time is: "</string>
+    <string name="time_selected" />
+    <string name="please_select_distance">Please select maximum search distance:</string>
+    <string name="please_select_privacy">Please select privacy:</string>
+    <string name="privateSelection">Private</string>
+    <string name="publicSelection">Public</string>
+    <string name="do_you_allow_sharing_of_data_analytics">Do you allow sharing of data analytics?</string>
+    <string name="allow_data_analytics">Allow data analytics.</string>
+    <string-array name="distance_array">
+        <item>5 Miles</item>
+        <item>10 Miles</item>
+        <item>15 Miles</item>
+        <item>20 Miles</item>
+        <item>Over 20 Miles</item>
+    </string-array>
 </resources>
