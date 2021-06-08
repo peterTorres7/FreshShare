@@ -61,5 +61,5 @@ import com.google.firebase.database.IgnoreExtraProperties;
         public String getImageUrl() {
             return imageUrl;
         }
-    }
+
 }
