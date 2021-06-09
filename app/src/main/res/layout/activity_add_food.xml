@@ -22,7 +22,7 @@
             android:layout_marginBottom="@dimen/dp5_dimen"
             android:textColor="@color/p_light"
             android:text="@string/add_food_item"
-            android:textSize="@dimen/dp20_plate_image"
+            android:textSize="@dimen/sp30_text"
             android:textStyle="bold"/>
 
         <ImageView

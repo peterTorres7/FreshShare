@@ -11,7 +11,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.contrib.DrawerMatchers.isClosed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
@@ -61,6 +60,18 @@ public class MainActivityTest {
     }
 
     @Test
+    public void clickAddFoodDrawer() {
+        onView(withId(R.id.drawer_layout))
+                .check(matches(isClosed(Gravity.LEFT)))
+                .perform(DrawerActions.open());
+
+        onView(withId(R.id.nav_view))
+                .perform(NavigationViewActions.navigateTo(R.id.nav_add_food));
+
+        onView(withId(R.id.add_food)).check((matches(withText("Add Food Item"))));
+    }
+
+    @Test
     public void clickSigUpDrawer() {
         onView(withId(R.id.drawer_layout))
                 .check(matches(isClosed(Gravity.LEFT)))
@@ -72,3 +83,4 @@ public class MainActivityTest {
         onView(withId(R.id.new_vendor)).check((matches(withText("New Vendor? Sign Up Below!"))));
     }
 }
+
